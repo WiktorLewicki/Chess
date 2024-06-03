@@ -1,3 +1,5 @@
+Prezentacja: https://youtu.be/sEf40HceMeU
+
 Jestem w pełni autorem całego kodu. Wiktor Lewicki
 
 Interfejs graficzny został napisany w QT 6.7.
