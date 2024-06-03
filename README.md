@@ -4,7 +4,7 @@ Presentation: https://youtu.be/sEf40HceMeU
 
 I am the sole author of the entire code. Wiktor Lewicki
 
-The bot and the engine are located in the files bot.cpp and engine.cpp.
+The bot and the engine are located in the files bot.cpp and silnik.cpp.
 
 The graphical interface was written in QT 6.7.
 
