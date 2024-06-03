@@ -1,3 +1,5 @@
+Czas pracy: 18h
+
 Prezentacja: https://youtu.be/sEf40HceMeU
 
 Jestem w pełni autorem całego kodu. Wiktor Lewicki
