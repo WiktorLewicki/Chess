@@ -4,6 +4,8 @@ Presentation: https://youtu.be/sEf40HceMeU
 
 I am the sole author of the entire code. Wiktor Lewicki
 
+The bot and the engine are located in the files bot.cpp and engine.cpp.
+
 The graphical interface was written in QT 6.7.
 
 Classic chess game. To play the version with a graphical interface, you need to go to the GRA/Files folder and run the Szachy.exe file.
