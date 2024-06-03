@@ -1,14 +1,13 @@
-Czas pracy: 18h
+Work time: 18h
 
-Prezentacja: https://youtu.be/sEf40HceMeU
+Presentation: https://youtu.be/sEf40HceMeU
 
-Jestem w pełni autorem całego kodu. Wiktor Lewicki
+I am the sole author of the entire code. Wiktor Lewicki
 
-Interfejs graficzny został napisany w QT 6.7.
+The graphical interface was written in QT 6.7.
 
-Klasyczna gra w szachy. Aby zagrać w wersji z interfejsem graficznym trzeba udać się do folderu GRA/Files i uruchomić plik Szachy.exe.
+Classic chess game. To play the version with a graphical interface, you need to go to the GRA/Files folder and run the Szachy.exe file.
 
-Aby zagrać w wersje konsolową należy skompilować plik main.cpp z folderu wersja konsolowa i go uruchomić. Sterowanie: x1, y1, x2, y2.
+To play the console version, compile the main.cpp file from the console version folder and run it. Controls: x1, y1, x2, y2.
 
-Jeżeli chodzi o bota, gra w miare fajnie. Jest to algorytm minmax z alpha beta pruningiem ze zmienną głębokością, natomiast wiadomo,
-że cieżko napisać bardzo silnego bota do szachów a do tego na własnym silniku szachowym.
+As for the bot, it plays fairly well. It's a minmax algorithm with alpha-beta pruning with variable depth. However, it's known that it's difficult to write a very strong chess bot, especially on your own chess engine.
