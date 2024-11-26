@@ -1,7 +1,7 @@
 #!/bin/bash
-cd ~/Chess || exit 1
-rm -rf ~/Chess/Makefile ~/Chess/*.o ~/Chess/*.pro.user ~/Chess/*.pro.*
-/usr/bin/qmake ~/Chess/src/Szachy.pro -o Makefile
+SCRIPT_DIR=$(dirname "$(realpath "$0")")
+cd "$SCRIPT_DIR" || exit 1
+rm -rf "$SCRIPT_DIR/Makefile" "$SCRIPT_DIR/*.o" "$SCRIPT_DIR/*.pro.user" "$SCRIPT_DIR/*.pro.*"
+/usr/bin/qmake "$SCRIPT_DIR/src/Szachy.pro" -o "$SCRIPT_DIR/Makefile"
 make
 ./szachy
-
