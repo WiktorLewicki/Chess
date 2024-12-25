@@ -27,6 +27,8 @@ private slots:
     void handleBoardClick();
 
 
+    void on_arrow_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

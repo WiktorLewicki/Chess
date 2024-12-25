@@ -27,5 +27,6 @@
         <file>img/pole_c/2/skoczek.png</file>
         <file>img/pole_c/2/wieza.png</file>
         <file>img/pole_b/1/Chess.png</file>
+        <file>img/arrow.png</file>
     </qresource>
 </RCC>

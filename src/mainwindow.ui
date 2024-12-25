@@ -1404,8 +1404,8 @@ border-image: url(:/img/pole_c/1/pion.png)
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>710</x>
-      <y>360</y>
+      <x>720</x>
+      <y>470</y>
       <width>181</width>
       <height>51</height>
      </rect>
@@ -1417,6 +1417,26 @@ border-image: url(:/img/pole_c/1/pion.png)
     </property>
     <property name="text">
      <string>Twoja Tura</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="arrow">
+    <property name="geometry">
+     <rect>
+      <x>740</x>
+      <y>290</y>
+      <width>111</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>OpenHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(:/img/arrow.png)
+</string>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

@@ -7,6 +7,8 @@
 #include <QString>
 #include <QMessageBox>
 #include <QApplication>
+#include <QTimer>
+vector<Szachownica> history;
 Szachownica game;
 int MV1=0, MV2=0, MV3=0, MV4=0;
 MainWindow::MainWindow(QWidget *parent)
@@ -25,12 +27,17 @@ MainWindow::MainWindow(QWidget *parent)
         }
     }
 }
-
+void wait(int milliseconds=50) {
+    QEventLoop loop;
+    QTimer::singleShot(milliseconds, &loop, &QEventLoop::quit);
+    loop.exec();
+}
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 void MainWindow::blok(bool var){
+    ui->arrow->setEnabled(var);
     for(int i = 1; i <= 8; ++i) {
         for(int j = 1; j <= 8; ++j) {
             QString buttonName = QString("pole%1%2").arg(i).arg(j);
@@ -68,6 +75,7 @@ int MainWindow::zapytanie(){
     return 4;
 }
 void MainWindow::MOVE(){
+    history.push_back(game);
     int info=game.ruch_gracza(MV1, MV2, MV3, MV4, 1);
     if(info==-1) koniec(0);
     if(game.kto()==1){
@@ -77,7 +85,7 @@ void MainWindow::MOVE(){
         ui->label->setText("Tura bota");
         blok(0);
         QApplication::processEvents();
-        usleep(1);
+        wait();
         ans rb=bot(game);
         if(game.ruch_gracza(rb.a, rb.b, rb.c, rb.d, 0)==-1) koniec(1);
         refresh();
@@ -85,7 +93,10 @@ void MainWindow::MOVE(){
         ui->label->setText("Twoja tura");
         blok(1);
     }
-    else QMessageBox::about(this, "BŁĄD", "Zły ruch!");
+    else{
+        history.pop_back();
+        QMessageBox::about(this, "BŁĄD", "Zły ruch!");
+    }
     MV1=MV2=MV3=MV4=0;
 }
 QString nazwa(int a, int b){
@@ -152,3 +163,12 @@ void MainWindow::handleBoardClick()
         }
     }
 }
+
+void MainWindow::on_arrow_clicked()
+{
+    if((int)history.size()<1) return;
+    game=history.back();
+    history.pop_back();
+    refresh();
+}
+
