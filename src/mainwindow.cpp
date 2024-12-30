@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "bot.cpp"
+#include "silnik.h"
+#include "silnik.h"
 #include <QPixmap>
 #include <QMainWindow>
 #include <QPushButton>

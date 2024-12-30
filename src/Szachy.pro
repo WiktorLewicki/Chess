@@ -12,10 +12,12 @@ TARGET = szachy
 INCLUDEPATH += .
 SOURCES += \
     main.cpp \
-    mainwindow.cpp
+    mainwindow.cpp \
+    silnik.cpp
 
 HEADERS += \
-    mainwindow.h
+    mainwindow.h \
+    silnik.h
 
 FORMS += \
     mainwindow.ui
